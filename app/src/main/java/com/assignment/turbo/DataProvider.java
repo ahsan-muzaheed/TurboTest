@@ -61,8 +61,8 @@ public class DataProvider {
     }
 
     private void getIssueAndFix() {
-        String[] issues = {"Bad O2", "Old cabin Filter", "Dirty Engine Filter"};
-        String[] fix = {"Replace Exhaust", "Replace cabin Filter", "Replace Engine Filter"};
+        String[] issues = {"Bad O2", "Bad Crank Sensor", "MAF Error"};
+        String[] fix = {"Replace Exhaust", "Replace crank sensor", "Replace MAF Sensor"};
         Random r = new Random();
         int index = r.nextInt(issues.length);
         issueString = issues[index];
@@ -75,7 +75,7 @@ public class DataProvider {
         healthDataModelList.add(new HealthModel("Air Filter Quality", returnStringBuilder()));
         healthDataModelList.add(new HealthModel("Oil Pressure", returnStringBuilder()));
         healthDataModelList.add(new HealthModel("Oil Life", returnStringBuilder()));
-        healthDataModelList.add(new HealthModel("Tire", "80%"));
+        healthDataModelList.add(new HealthModel("Tire", returnStringBuilder()));
         healthDataModelList.add(new HealthModel("Overall Health", returnStringBuilder()));
         healthDataModelList.add(new HealthModel("Estimated mileage", returnStringBuilder4Miles()));
 
